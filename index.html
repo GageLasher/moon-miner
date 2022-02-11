@@ -29,8 +29,9 @@
             <div class="col-4">
                 
                <h3>Stats</h3>
-               <div class="card">
-                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, quibusdam ducimus facilis praesentium tempore doloremque.</p>
+               <div class="card p-md-2">
+                <li>CPS (Cheese Per Second): <span id="cps">0.00</span></li>
+                <li>TCM (Total Cheese Multiplier Per Click): <span id="tcm">0</span></li>
                </div>
             
             </div>
@@ -41,7 +42,7 @@
             <div class="col-4">
                 
                <h3>Inventory</h3> 
-               <div class="card">
+               <div class="card p-md-2">
                    <li>Cheese: <span id="cheese">0</span></li>
                    <li>Pickaxes: <span id="pickaxes">0</span></li>
                    <li>Miners: <span id="miners">0</span></li>
@@ -57,11 +58,15 @@
         <div class="row store-front text-center p-5">
             <div class="col-6">
                <h3>Store</h3> 
-               <div class="card">
+               <div class="card p-md-2">
                    <button class="btn btn-primary" onclick="buyPickAxe()">Buy Pickaxe +1</button>
+                   <div>Costs: <span id="pick-cost">5</span></div>
                    <button class="btn btn-primary" onclick="buyMiner()">Buy Miner +5</button>
+                   <div>Costs: <span id="miner-cost">100</span></div>
                    <button class="btn btn-primary" onclick="buyRover()">Buy Rover +20</button>
+                   <div>Costs: <span id="rover-cost">600</span></div>
                    <button class="btn btn-primary" onclick="buyRocket()">Buy Rocket +500</button>
+                   <div>Costs: <span id="rocket-cost">5000</span></div>
                </div>
             </div>
         </div>
