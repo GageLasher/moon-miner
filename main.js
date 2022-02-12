@@ -18,6 +18,10 @@ let clickUpgrades = {
 
 }
 
+
+
+
+
 let automaticUpgrades = {
     rovers: {
       price: 600,
@@ -79,6 +83,8 @@ function mine() {
     console.log(cheese);
     update()
 }
+
+
 
 function update() {
     let total = 0
