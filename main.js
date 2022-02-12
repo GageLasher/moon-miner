@@ -36,13 +36,51 @@ let automaticUpgrades = {
     }
   }
 
+//   let pickButton = document.getElementById('pick-button')
+//   pickButton.disabled = true;
+  setInterval(affordanceCheck, 100)
+
+  function affordanceCheck() {
+    let pickButton = document.getElementById('pick-button')
+    pickButton.disabled = true;
+    let minerButton = document.getElementById('miner-button')
+  minerButton.disabled = true;
+  let roverButton = document.getElementById('rover-button')
+  roverButton.disabled = true;
+  let rocketButton = document.getElementById('rocket-button')
+  rocketButton.disabled = true;
+      
+          if(cheese < clickUpgrades.pickaxes.price) {
+            pickButton.disabled = true
+        } else {
+            pickButton.disabled = false
+        }
+        if(cheese < clickUpgrades.cartminer.price) {
+            minerButton.disabled = true
+        } else {
+            minerButton.disabled = false
+        }
+        if(cheese < automaticUpgrades.rovers.price) {
+            roverButton.disabled = true
+        } else {
+            roverButton.disabled = false
+        }
+        if(cheese < automaticUpgrades.rocket.price) {
+            rocketButton.disabled = true
+        } else {
+            rocketButton.disabled = false
+        }
+      
+  
+  }
+
  function buyPickAxe() {
      if(cheese >= clickUpgrades.pickaxes.price) {
          clickUpgrades.pickaxes.quantity++
          cheese -= clickUpgrades.pickaxes.price
          clickUpgrades.pickaxes.price *=2
          console.log("purchased")
-     }
+     } 
      update()
  } 
  function buyRover() {
